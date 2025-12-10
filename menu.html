@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(236, 209, 176);
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #frm{
+            padding: 20px;
+            border: 1px solid brown;
+            border-radius: 30px;
+            box-shadow: 0px 2px 3px 2px grey;
+            color: rgb(106, 63, 8);
+            margin-top: 50px;
+        }
+        .inp{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inp h2{
+            margin-right: 20px;
+        }
+        .in{
+             padding: 8px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 1px solid brown;
+            background-color: rgb(245, 230, 211);
+            cursor: pointer;
+        }
+        #subbut{
+            padding: 5px 20px 5px 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 2px 2px rgb(98, 98, 58);
+             background-color: rgb(245, 230, 211);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="frm">
+    <form action="">
+        <div class="inp">
+            <h1>Customer details</h1>
+        </div>
+           <div class="inp">
+            <h2>Enter name</h2>
+            <input type="text" class="in">
+           </div>
+           <div class="inp">
+            <h2>enter address</h2>
+            <input type="text" class="in">
+           </div>
+           <div class="inp">
+            <h2>phone no</h2>
+            <input type="number" class="in">
+           </div>
+           <div class="inp">
+            <h2>PIN code</h2>
+            <input type="number" class="in">
+           </div>
+           <div class="inp">
+            <h2>male</h2>
+            <input type="radio">
+            <h2>female</h2>
+            <input type="radio">
+           </div>
+           <div class="inp">
+            <input type="submit" id="subbut">
+           </div>
+
+    </form>
+   </div>
+    </main>
+    <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // stop form from submitting automatically
+
+    // Get all form fields
+    const inputs = document.querySelectorAll("input[type='text'], input[type='number']");
+    const name = inputs[0].value.trim();
+    const address = inputs[1].value.trim();
+    const phone = inputs[2].value.trim();
+    const pin = inputs[3].value.trim();
+
+    const genders = document.querySelectorAll("input[type='radio']");
+    const male = genders[0].checked;
+    const female = genders[1].checked;
+
+    // Check all fields one by one
+    if (name === "") {
+        alert("Please enter your name.");
+        return;
+    }
+
+    if (address === "") {
+        alert("Please enter your address.");
+        return;
+    }
+
+    if (phone === "") {
+        alert("Please enter your phone number.");
+        return;
+    }
+
+    if (pin === "") {
+        alert("Please enter your PIN code.");
+        return;
+    }
+
+    if (!male && !female) {
+        alert("Please select your gender.");
+        return;
+    }
+
+    // If everything is filled
+    alert("Form submitted successfully!");
+    this.submit(); // finally submit
+});
+</script>
+
+</body>
+</html>

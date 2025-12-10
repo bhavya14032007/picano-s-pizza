@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picano's pizza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <div class="head logo">
+                <img src="assets/ChatGPT Image Dec 9, 2025, 08_22_00 PM.png" width="76pxx">
+                
+            </div>
+            <div class="head">
+                <a href="">menu</a>
+            </div>
+            <div class="head">
+                <a href="">location</a>
+            </div>
+            <div class="head">
+                <a href="">franchize</a>
+            </div>
+            <div class="head search">
+                <input id="search" type="text" placeholder="search item">
+            </div>
+            <div class="head last">
+                <a href="">contact us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="begining">
+            <div class="begin">
+                <h1>Experience the authentic Italian flavours on your table </h1>
+            </div>
+            <div class="begin">
+                <h2>
+                    only at pinaco's pizza
+                </h2>
+            </div>
+            <div class="begin">
+                <h3>
+                    where flavour meet taste  buds
+                </h3>
+            </div>
+            <div id="herosection">
+                <div class="hero odd">
+                    <img src="assets/PIZZA-MARGHERITA.jpg" width="500px">
+                    <div class="content">
+                        <h2>Margereta pizza</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fuga iure facilis similique, dolore dicta soluta nobis obcaecati itaque commodi, sit tenetur placeat unde nisi deleniti fugiat. Quos, voluptatibus aperiam.</p>
+                        <button id="buy">Buy now</button>
+                    </div>
+                </div>
+                <div class="hero odd">
+                    <div class="content">
+                        
+                        <h2>farm house</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum optio deserunt reiciendis reprehenderit doloremque excepturi. Accusantium laboriosam obcaecati distinctio modi qui nulla ea maxime quod?
+                            
+                        </p>
+                        <button id="buy">Buy now</button>
+                    </div>
+                    <img src="assets/cheeze.avif" alt="" width="500px">
+                </div>
+                <div class="hero odd">
+                    <img src="assets/preppe.avif" alt=""width="500px">
+                    <div class="content">
+                        <h2>preppe tofu</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quaerat omnis in praesentium ab eaque ipsam quo quae eius cupiditate numquam dolores sunt natus consequuntur quia, consectetur sed eos rerum!
+
+                        </p>
+                        <button id="buy">Buy now</button>
+                    </div>
+                </div>
+                <div class="hero odd">
+                    <div class="content">
+                        <h2>arbiritta</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, hic possimus laborum consequatur harum corrupti ex officiis consectetur officia voluptatum iure ullam, cupiditate doloribus voluptas beatae expedita illo soluta autem.</p>
+                        <button id="buy">Buy now</button>
+                    </div>
+                    <img src="assets/thin crust.jpeg" alt="" width="800px" height="400px">
+                </div>
+                <div class="hero odd">
+                    <img src="assets/veggie.jpg" alt="" width="400px">
+                    <div class="content">
+                        <h2>veggie house</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste pariatur dolorum nostrum magni? Eius, delectus! Impedit corrupti aliquam itaque cum praesentium aut deserunt perspiciatis voluptatibus, eligendi ipsam, reprehenderit alias in!</p>
+                        <button id="buy">Buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="reservation">
+                <div class="reserve">
+                    <h1>
+                        reseerve your slot now......
+                    </h1>
+                </div>
+                <div class="reserve">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit dignissimos in vitae quis amet voluptatibus quae nemo excepturi esse consequuntur quisquam, optio aspernatur quaerat ea ab voluptates fuga tempore deleniti odit! Eaque temporibus pariatur deserunt sequi voluptatem nemo dolorum odio maiores ullam ipsa beatae excepturi quaerat adipisci culpa, veritatis aut?
+
+                    </p>
+                </div>
+                <div class="reserve">
+                    <button id="res">
+                        reserve now
+                    </button>
+                </div>
+        </div>
+    </main>
+    <footer>
+        <div id="foot">
+            <h2>For any query fell free to reach us....</h2>
+            <p>even if u tried to reach us we wont assist u ._. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia id unde praesentium ea eos dolore, optio maiores illum ipsum consequatur cupiditate omnis. Maiores vitae velit vel ratione doloribus itaque placeat, natus maxime, facere animi, ipsam blanditiis sequi! Quia nisi laboriosam, necessitatibus illum rerum omnis cumque quibusdam enim, voluptatibus sit sint.</p>
+        </div>
+    </footer>
+ <script>
+// Handle Buy Now buttons → redirect to menu page
+const buyButtons = document.querySelectorAll("#buy");
+buyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        window.location.href = "menu.html";   
+    });
+});
+
+// Handle Reservation button → redirect to reservation page
+const reservationBtn = document.getElementById("res");
+reservationBtn.addEventListener("click", () => {
+    window.location.href = "reservation.html";   
+});
+
+// CUSTOM ALERT MESSAGES FOR EACH ANCHOR TAG
+const links = document.querySelectorAll("header a");
+
+links.forEach(link => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();  
+
+        let text = link.innerText.toLowerCase();
+
+        if (text.includes("menu")) {
+            alert(" Menu will be available soon!");
+        }
+        else if (text.includes("location")) {
+            alert(" Location details coming shortly!");
+        }
+        else if (text.includes("franchize") || text.includes("franchise")) {
+            alert(" Franchise options will be updated soon!");
+        }
+        else if (text.includes("contact")) {
+            alert(" Contact page is under construction!");
+        }
+        else {
+            alert("This section is under development!");
+        }
+    });
+});
+
+
+// 🔍 SEARCH BAR ALERT
+const searchBox = document.getElementById("search");
+
+searchBox.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {     // when user presses Enter
+        event.preventDefault();
+        let value = searchBox.value.trim();
+
+        if (value !== "") {
+            alert( value + "' is not available at the moment.");
+        }
+    }
+});
+</script>
+
+</body>
+</html>

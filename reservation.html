@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | Picano's Pizza</title>
+
+    <style>
+        *{
+            background-color: rgb(236, 209, 176);
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        #frm{
+            padding: 20px 50px;
+            border: 2px solid brown;
+            border-radius: 30px;
+            width: 550px;
+            box-shadow: 0px 2px 3px 2px grey;
+            color: rgb(106, 63, 8);
+        }
+        .inp{
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .inp h2{
+            width: 180px;
+            margin: 0;
+            text-align: right;
+            margin-right: 20px;
+            font-size: 22px;
+        }
+        .inp input{
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 1px solid brown;
+            width: 250px;
+            font-size: 16px;
+        }
+        #submitbtn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        #submitbtn input{
+            padding: 8px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 1px solid brown;
+            background-color: rgb(245, 230, 211);
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="frm">
+            <form>
+                <div class="inp" style="justify-content: center;">
+                    <h1 style="background:none;">Customer details</h1>
+                </div>
+
+                <!-- Customer Name -->
+                <div class="inp">
+                    <h2>Enter name</h2>
+                    <input type="text" id="name">
+                </div>
+
+                <!-- Address -->
+                <div class="inp">
+                    <h2>Enter address</h2>
+                    <input type="text" id="address">
+                </div>
+
+                <!-- Phone -->
+                <div class="inp">
+                    <h2>Phone no</h2>
+                    <input type="number" id="phone">
+                </div>
+
+                <!-- PIN -->
+                <div class="inp">
+                    <h2>PIN code</h2>
+                    <input type="number" id="pin">
+                </div>
+
+                <!-- Gender -->
+                <div class="inp">
+                   <h2>male</h2> <input type="radio">
+                   <h2>female</h2> <input type="radio">
+                </div>
+
+                <!-- Reservation Date -->
+                <div class="inp">
+                    <h2>Reservation date</h2>
+                    <input type="date" id="resDate">
+                </div>
+
+                <!-- Reservation Day -->
+                <div class="inp">
+                    <h2>Day</h2>
+                    <input type="text" id="day" placeholder="Monday / Tuesday / etc">
+                </div>
+
+                <!-- Reservation Time -->
+                <div class="inp">
+                    <h2>Time</h2>
+                    <input type="time" id="time">
+                </div>
+
+                <!-- Submit Button -->
+                <div id="submitbtn">
+                    <input type="submit" value="Reserve">
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // collecting values
+    const name = document.getElementById("name").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const pin = document.getElementById("pin").value.trim();
+    const date = document.getElementById("resDate").value.trim();
+    const day = document.getElementById("day").value.trim();
+    const time = document.getElementById("time").value.trim();
+    
+    const gender = document.querySelector("input[name='gender']:checked");
+
+    // validations
+    if (name === "") {
+        alert("Please enter your name.");
+        return;
+    }
+    if (address === "") {
+        alert("Please enter your address.");
+        return;
+    }
+    if (phone === "") {
+        alert("Please enter your phone number.");
+        return;
+    }
+    if (pin === "") {
+        alert("Please enter your PIN code.");
+        return;
+    }
+    if (!gender) {
+        alert("Please select your gender.");
+        return;
+    }
+    if (date === "") {
+        alert("Please select your reservation date.");
+        return;
+    }
+    if (day === "") {
+        alert("Please enter the day (e.g., Monday).");
+        return;
+    }
+    if (time === "") {
+        alert("Please select a reservation time.");
+        return;
+    }
+
+    // success
+    alert("🎉 Reservation submitted successfully!");
+    this.submit(); // finally submit form
+});
+</script>
+
+</body>
+</html>

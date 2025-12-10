@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+}
+header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head a{
+    text-decoration: none;
+    color: green;
+}
+#head a:hover{
+    color: rgb(15, 81, 15);
+    text-shadow: 2px 2px  2px burlywood;
+    transition: .3s;
+}
+#head{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    border: 2px solid saddlebrown;
+    border-radius: 30px;
+    position: sticky;
+
+}
+.head{
+    margin: 20px;
+    font-size: 180%;
+}
+.last{
+    width: 60%;
+    text-align: end;
+}
+#search{
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 80%;
+}
+.search{
+    margin-left: 40%;
+}
+#herosection{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#herosection h2{
+    font-size: 200%;
+    margin-bottom: 30px;
+}
+#begining{
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.begin{
+    margin-top  : 30px;
+}
+.odd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid brown;
+    margin: 30px;
+    border-radius: 30px;
+}
+.odd img{
+    margin: 20px;
+    border: 0px;
+    border-radius: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(241, 180, 100);
+}
+.content p{
+    color: rgb(117, 92, 55);
+    padding: 20px;
+}
+.content button{
+    text-align: center;
+    margin-top: 30px;
+    width: 140px;
+    height: 40px;
+    border: 2px double beige;
+    border-radius: 25px;
+    text-shadow: 2px 2px 2px  rgb(190, 190, 65);
+    font-size: large;
+
+}
+.content button:hover{
+    background-color: rgb(188, 160, 126);
+    transition: 0.5s;
+    box-shadow: inset 0px 2px 5px 5px rgb(207, 207, 145)
+}
+#reservation{
+    width: 600px;
+    padding: 40px;
+    height: 440px;
+    border: 2px solid brown;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+#reservation h1{
+    font-size: 150%;
+}
+#reservation p{
+    font-size: 150%;
+}
+.reserve{
+    margin: 20px;
+}
+#reservation button{
+    padding: 10px;
+    margin-top: 50px;
+    width: 130px;
+    border: 2px double beige;
+    border-radius: 25px;
+    text-shadow: 2px 2px 2px  rgb(190, 190, 65);
+    font-size: large;
+}
+#reservation button:hover{
+    background-color: rgb(188, 160, 126);
+    transition: 0.5s;
+    box-shadow: inset 0px 2px 5px 5px rgb(207, 207, 145)
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#foot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(244, 209, 164);
+}
